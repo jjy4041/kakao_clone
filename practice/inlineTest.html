@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Test</title>
+    <style>
+        .box{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            /* display: inline-block; 은 div일지라도 옆에 오게끔 함. */
+            /* display: inline; 은 박스의 모든 property 설정을 지움, 텍스트처럼 그만큼만 적용 */
+        }
+    </style>
+</head>
+<body>
+    <span class="box">13</span>
+    <span class="box">13535</span>
+    <span class="box">135353535</span>
+</body>
+</html>
