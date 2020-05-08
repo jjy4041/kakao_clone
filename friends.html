@@ -9,6 +9,7 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />  <!--fontAwesome CDN-->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Friends | Kakao Clone</title>
 </head>
 <body>
@@ -40,27 +41,28 @@
 
     <main class="friends">
       <header class="friends__header">
-        <div class="friends__friend friend friend--lg"> <!--내 프로필-->
+        <div class="friends__friend friend"> <!--내 프로필-->
             <div class="friend__column">
                 <img src="images/avatar.jpg" class="g-avatar friend__avatar">
                 <div class="friend__content">
-                    <span class="friend_name">
-                        YeEun
+                    <span class="friend__name">
+                        Richie Faulkner
                     </span>
                     <span class="friend__status">
-                        ^_^
+                        2020 Tokyo
                     </span>
                 </div>  
             </div>
-        </div>                                          <!--내 프로필 끝-->
-      </header>
+        </div>                                          
+      </header> <!--내 프로필 끝-->
+
       <div class="friends__plus">   <!--플러스친구 부분-->
           <h5 class="friends__title">Plus Friend</h5>
           <div class="friends__friend friend">
               <div class="friend__column">
-                  <img src="images/avatar.jpg" class="g-avatar friend__avatar">
+                  <img src="images/avatar.jpg" class="friend__avatar">
                   <div class="friend__content">
-                      <span class="friend_name">
+                      <span class="friend__name">
                           Plus Friend's Name
                       </span>
                   </div>
@@ -72,13 +74,13 @@
             <h5 class="friends__title">Firends 14</h5>
             <li class="friends__friend friend"> <!--친구 프로필-->
                 <div class="friend__column">
-                    <img src="images/avatar.jpg" class="g-avatar friend__avatar">
+                    <img src="images/avatar.jpg" class="friend__avatar">
                     <div class="friend__content">
-                        <span class="friend_name">
-                            YeEun
+                        <span class="friend__name">
+                            Rob Halford
                         </span>
                         <span class="friend__status">
-                            ^_^
+                            Pain Killer!
                         </span>
                     </div>  
                 </div>
@@ -86,8 +88,8 @@
                     <div class="friend__now-listening">
                         <span>
                             PainKiller - JudasPriest
+                            <i class="fas fa-play"></i>
                         </span>
-                        <i class="fas fa-play"></i>
                     </div>
                 </div>
             </li>   

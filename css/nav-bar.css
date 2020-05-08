@@ -1,0 +1,45 @@
+/* 네비게이션바, 하단메뉴 설정, fixed를 쓰려면 항상 width 설정*/
+/* padding은 아이콘을 기준으로 [상하][좌우], border-top은 위에 흰 가로줄 */
+/* left,bottom을 0px로 해서 왼쪽,맨아래 마진이 없게 함 */
+.nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fcfcfc;
+    padding: 20px 50px;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid #f7f7f7;
+
+}
+/* 아이콘들을 가로로 하기 위해 flex, between으로 떨어뜨려 놓는다.여기서 border-box*/
+.nav .nav__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 아이콘의 사이즈를 헤더의 아이콘 사이즈와 맞춤 */
+.nav i {
+    font-size: 20px;
+}
+
+/* a태그, 숫자가 이 a태그를 기준으로 움직이게 하기 위해. */
+.nav .nav__list-link{
+    position: relative;
+}
+
+/* a태그 안에서 absolute된다. (숫자 8 표시)*/
+.nav .nav__badge{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 12px;
+    color: white;
+    background-color: #dc5d46;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

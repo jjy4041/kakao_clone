@@ -1,0 +1,85 @@
+/* 이름,대화, 날짜 부분 */
+.friend{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 친구들 프사 */
+.friend .friend__avatar{
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 38%;
+    margin-right: 15px;
+}
+
+/* 큰사이즈 이미지 */
+.g-avatar.friend__avatar{
+    width: 70px;
+}
+
+/* 중간사이즈 이미지 */
+.m-avatar.friend__avatar{
+    width: 60px;
+}
+
+/* img와 div(이름,대화)를 옆으로 설정하기 위해 flex, */
+.friend .friend__column{
+    display: flex;
+    align-items: center;
+}
+
+/* 프사옆친구이름 - block을 줘서 상메를 span을 아래로 가게한다. */
+.friend__content .friend__name{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+/* 채팅창(bottom-text)에서의 상태메시지, 친구창에서의(status) 상태메시지 흐리게 */
+.friend__content .friend__status,
+.friend__content .friend__bottom-text,
+.chat__timestamp{
+    opacity: 0.6;
+}
+
+/* 채팅창(Chats) 부분 */
+.friend__content .friend__bottom-text{
+    font-size: 14px;
+}
+
+/* 친구창(Friends) 부분 */
+.friend__content .friend__status{
+    font-size: 13px;
+}
+
+/* Chats창의 메시지 온 날짜 부분 */
+.chat__timestamp{
+    font-size: 12px;
+}
+
+/* 상태메시지의 음악설정 부분 */
+.friend .friend__now-listening{
+    border : 2px solid #52e084;
+    padding : 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.friend__now-listening span{
+    opacity: 0.7;
+}
+
+.friend__now-listening i{
+    font-size: 11px;
+}
+
+.friend__add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+}

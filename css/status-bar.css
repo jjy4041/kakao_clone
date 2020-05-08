@@ -1,0 +1,16 @@
+/* 최상단바 설정 */
+.status-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: #656565;
+}
+
+/*아이콘들 크기 설정*/
+.status-bar i{
+    font-size: 14px;
+}
+/* .father .child로 쓴 것뿐. .child만 써도 됨. 배터리 왼쪽 여백 주기 */
+.status-bar .status-bar__battery-level{
+    margin-left: 5px;
+}

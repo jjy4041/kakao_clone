@@ -1,0 +1,34 @@
+/* div 2개로 이루어져 있어서 서로 양옆으로 떨어진다. */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* header부분의 Chats이라는 굵은 글씨 */
+.header .header__title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* 헤더부분의 아이콘 */
+.header .header__icon{
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* 화살표 옆으로 오게하기, 가운데 정렬 */
+.header .header__header-column{
+    display: flex;
+    align-items: center;
+}
+
+.header .header__back-btn{
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+
+

@@ -1,0 +1,43 @@
+/* 아이콘 4개부분 가로로 정렬 */
+.find .find__header-list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+/* 아이콘 4배 부분 설정 */
+.find .header-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+/* 아이콘 4개 부분 줄 바꾸기 (아이콘과 텍스트) */
+.find .header-btn__title{
+    display: block;
+}
+
+/* QR Code같은 버튼의 타이틀 */
+.find .header-btn__title{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 아이콘 크기 다시 조절 */
+.find .header-btn__icon{
+    font-size: 14px;
+}
+
+.find .find__recommended{
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px sold #f7f7f7;
+}
+
+.find .find__title{
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+

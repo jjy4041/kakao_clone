@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors and Pseudo Selectors</title>
+    <style>
+        input[type="submit"]{
+            background-color: red;
+        }
+        input[type="password"]{
+            background-color: yellow;
+        }
+        input{
+            border: 1px solid blue;
+        }
+        .box{
+            background-color: green;
+            display: block;
+            height: 100px;
+            border: 1px solid black;
+        }
+        /* first-child도 있음/ N번째는 nth-child(2) 이런식으로 (2n)하면 2의배수  */
+        .box:last-child{
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">
+            <input type="password" />
+            <input type="submit" class="submit"/>
+        </div>
+    </div>
+</body>
+</html>

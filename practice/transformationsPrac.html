@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        /* .box{
+            width : 100px;
+            height : 100px;
+            background: red;
+            transition: transform .3s ease-in-out;
+            
+        }
+        .box:hover{
+            transform: rotate(50turn) scale(.100, .5);
+        } */
+        /* CSS로 하여금 키프레임은 애니메이션을 생성한다고 알려줌 */
+
+        .box{
+            width : 100px;
+            height : 100px;
+            background: red;
+            animation: 3s scaleAndRotateSquare infinite ease-in-out;
+            
+        }
+        /* 또는 from/ to */
+        @keyframes scaleAndRotateSquare{
+            0%{
+                transform: none;
+            }
+            50%{
+                transform: rotate(3turn) scale(.5, .5);
+                color: white;
+            }
+            100%{
+                transform: none;
+                color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lalalalalalalalala
+    </div>
+</body>
+</html>
