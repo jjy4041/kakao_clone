@@ -1,0 +1,271 @@
+.header-wrapper {
+    position: fixed;
+    z-index: 2;
+    top:0px;
+    width: 100%;
+    padding: 5px 0px;
+    background-color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* body의 패딩 0 */
+.chats-body{
+    padding: 10px 0px;
+    padding-top: 100px;
+}
+
+/* header,status-bar의 패딩도 조절 */
+.chats-body .header,
+.chats-body .status-bar {
+    padding: 0px 20px;
+}
+
+/* 배경이미지 설정과, 이미지가 화면에 가득 차도록 */
+.chats-body {
+    background-image: url("../images/chatBg.png");
+    min-height: 1000vh;
+}
+/* 최하단 메시지 적는 창 설정 (margin,left,right) = 가운데 정렬 */
+.chat__write-container {
+    position: fixed;
+    bottom: 0px;
+    /* bottom : 50px; */
+    /* width: 80%; */
+    margin: 0 auto;
+    left : 0;
+    right : 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fcfcfc;  백그라운드컬러는 수정 후 가지면 안된다고 함*/
+    /* padding: 0px 20px; 수정 후 제거 */
+    width: 100%;    /*수정 후 추가.   */
+    /* border-radius: 40px; */
+    /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); */
+    
+}
+
+/* 채팅입력하는곳의 아이큰 크기 */
+.chat__write i{
+    font-size: 22px;
+}
+
+.chat__write-column:nth-child(2){
+    width: 80%;
+}
+
+/* 채팅창 부분 */
+.chat__write-column input{
+    padding: 20px 10px;
+    width: 100%;
+    border : none;
+    font-size: 14px;
+}
+
+/* 채팅 내용들 */
+.chat-screen .chat__messages {
+    border-top: 1px solid #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    padding-top: 30px;
+}
+    /* 대화창의 날짜부분 (가운데) */
+.chat__messages .chat__timestamp {
+    background-color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* 받는 메시지, 보내는 메시지 전부 */
+.message {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* 친구이름+메시지 내용 */
+.message .message__content {
+    width:80%;
+}
+
+/* 친구에게 받은 메시지 */
+.incoming-message{
+    align-self: flex-start;
+}
+
+/* 내가 보내는 메시지 */
+.sent-message{
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+@keyframes spin{
+    from{
+        transform: none;
+    }
+    to{
+        transform: rotateY(1turn);
+    }
+}
+
+/* 친구 이미지 */
+.incoming-message img{
+    width: 40px;
+    border-radius: 15px;
+    margin-right: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+    animation: spin 1s linear;
+}
+
+.message .message__content{
+    padding: 1px;
+}
+
+/* 친구 대화내용, 내 대화내용 */
+.message .message__bubble{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: block;
+}
+
+/* 친구 이름 */
+.incoming-message .message__author{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* 받은메시지 버블 왼쪽아래를 각지게 */
+.incoming-message .message__bubble{
+    border-bottom-left-radius: 0;
+}
+
+/* 보낸메시지 버블 왼쪽아래를 각지게 */
+.sent-message .message__bubble{
+    border-bottom-left-radius: 0;
+}
+
+.incoming-message .message__bubble {
+    border-bottom-left-radius: 0px;
+    background-image: linear-gradient(to right, #7b4397, #dc2430);
+ }
+  
+.sent-message .message__bubble {
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(to left, #00c6ff, #0072ff);
+}
+
+/* 애니메이션 수정 후의 +스퀘어 위치 */
+.chat__icon-left{
+    position: absolute;
+    left: 10px;
+}
+
+/* 애니메이션 수정 후의 스마일+마이크 위치 */
+.chat__icon-right{
+    position: absolute;
+    right: 10px;
+}
+
+@keyframes float{
+    0% {
+        /* transform: translateY(-100px); */
+        box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+          0 18px 36px -18px rgba(0, 0, 0, 0.3),
+          0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+      }
+      50% {
+        /* transform: translateY(-110px); */
+        box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
+          0 18px 36px -18px rgba(0, 0, 0, 0.3),
+          0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+      }
+      100% {
+        /* transform: translateY(-100px); */
+        box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+          0 18px 36px -18px rgba(0, 0, 0, 0.3),
+          0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+      }
+}
+
+/* 애니메이션 수정 후의 메시지입력창 */
+.chat__write {
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0;
+    padding: 20px 60px;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    transition: width 0.5s ease-in, border-radius 0.5s ease-in,
+    transform 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+/* 채팅창 클릭했을 때의 선 */
+.chat__write:focus {
+    outline: none;
+    width: 80%;
+    transform: translateY(-100px);
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    animation: float 2s ease-in-out forwards;
+}
+
+/* 채팅창 양 옆 아이콘 크기 */
+.chat__icon{
+    font-size: 18px;
+    transition: opacity .5s ease-in-out;
+}
+
+/* 채팅창 클릭시 양옆 아이콘 사라짐 */
+.chat__write:focus ~ .chat__icon{
+    opacity: 0;
+}
+
+/* 페이지 로드 될 때 메시지가 왼쪽에서~ */
+@keyframes incomingAnimation {
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.incoming-message {
+    animation: incomingAnimation 0.5s ease-out forwards;
+}
+
+/* 페이지 로드 될 때 메시지가 오른쪽에서~ */
+@keyframes sentAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.sent-message {
+    animation: sentAnimation .5s ease-out forwards;
+}

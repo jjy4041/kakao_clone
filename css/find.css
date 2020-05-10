@@ -5,7 +5,7 @@
     margin-top: 40px;
 }
 
-/* 아이콘 4배 부분 설정 */
+/* 아이콘 4개 부분 설정 */
 .find .header-btn{
     display: flex;
     flex-direction: column;

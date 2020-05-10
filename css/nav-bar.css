@@ -43,3 +43,19 @@
     align-items: center;
     border-radius: 50%;
 }
+
+@keyframes showNavBar {
+    from{
+        transform: translateY(80px);
+    }
+    to{
+        transform: none;
+    }
+}
+
+.nav {
+    /* ↓ 처음 로드될 때 숨겨져 있는 상태에서 위로 올라온다. */
+    transform: translateY(80px);
+    animation: showNavBar 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+}

@@ -1,0 +1,53 @@
+.more .more__btn-list,
+.more .more__suggestions-list{
+    display: flex;
+    margin: 30px 0px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+/* 스마일 포함 아이콘 3개 아이콘+이름 부분 + 밑에 Suggestions 부분 아이콘 3개 */
+.more__btn-list .more__btn,
+.more .suggestion{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Emoticons,Themes,Account 등 이름 */
+.more__btn .more__btn-title{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Suggestions이라는 글씨가 있는 박스 위 경계선 */
+.more .more__suggestions{
+    border-top: 1px solid #f7f7f7;
+    padding-top: 20px;
+}
+
+/* Suggestions 이라는 글씨 */
+.more .more__title{
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* 밑에 Suggestions쪽 아이콘 타이틀 */
+.suggestion .suggestion__title{
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.suggestion .suggestion__icon{
+    background-color: #fce006;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.suggestion__icon i{
+    font-size: 27px;
+}
